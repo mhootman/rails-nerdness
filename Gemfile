@@ -5,6 +5,8 @@ gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'jquery-rails', '2.0.2'
+gem 'omniauth-twitter'
+gem 'omniauth-github'
 
 group :development, :test do
   gem 'sqlite3', '1.3.6'
@@ -12,7 +14,7 @@ group :development, :test do
 end
 
 group :development do
-gem 'annotate', '2.5.0'
+  gem 'annotate', '2.5.0'
 end
 
 # Gems used only for assets and not required

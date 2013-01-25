@@ -36,7 +36,12 @@ textarea {
 }
 
 .hero-unit {
-  background-image: linear-gradient(to bottom, #111111, #AB1234);
+  background: -webkit-gradient(linear, center top, center bottom, from(#111111), to(#AB1234));
+  background: -webkit-linear-gradient(#111111, #AB1234);
+  background: -moz-linear-gradient(#111111, #AB1234);
+  background: -o-linear-gradient(#111111, #AB1234);
+  background: -ms-linear-gradient(#111111, #AB1234);
+  background: linear-gradient(#111111, #AB1234);
   h1 {
     color: #FFFFFF
   }
@@ -73,7 +78,13 @@ p {
 /* header */
 
 .navbar-inverse .navbar-inner {
-  background-image: linear-gradient(to bottom, #AB1234, #111111);
+  /* background-image: linear-gradient(to bottom, #AB1234, #111111); */
+  background: -webkit-gradient(linear, center top, center bottom, from(#AB1234), to(#111111));
+  background: -webkit-linear-gradient(#AB1234, #111111);
+  background: -moz-linear-gradient(#AB1234, #111111);
+  background: -o-linear-gradient(#AB1234, #111111);
+  background: -ms-linear-gradient(#AB1234, #111111);
+  background: linear-gradient(#AB1234, #111111);
 }
 
 #logo {
