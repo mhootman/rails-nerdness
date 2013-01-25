@@ -1,6 +1,10 @@
-<div class="center hero-unit">
-  <h1>Welcome to March Nerdness</h1>
-  <h2>
-    Where jocks become nerds and nerds become legends.
-  </h2>
-</div>
+<% if current_user %>
+  <li><%= link_to "Team API", team_api_path %></li>
+<% else %>
+  <div class="center hero-unit">
+    <h1>Welcome to March Nerdness</h1>
+    <h2>
+      Where jocks become nerds and nerds become legends.
+    </h2>
+  </div>
+<% end %>
