@@ -1,10 +1,12 @@
 MarchNerdness::Application.routes.draw do
 
+  devise_for :users
+
   # root redirect
   root to: 'static_pages#home'
 
   # omniauth
-  match "/auth/:provider/callback", to: 'sessions#create'
+  # match "/auth/:provider/callback", to: 'sessions#create'
   match "/signout",  to: 'sessions#destroy', as: :signout
   match "/signin",   to: 'sessions#new',     as: :signin
 

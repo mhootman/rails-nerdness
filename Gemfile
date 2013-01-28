@@ -7,6 +7,7 @@ gem 'faker', '1.0.1'
 gem 'jquery-rails', '2.0.2'
 gem 'omniauth-twitter'
 gem 'omniauth-github'
+gem 'devise', '2.2.2'
 
 group :development, :test do
   gem 'sqlite3', '1.3.6'
