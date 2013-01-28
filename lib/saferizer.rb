@@ -3,6 +3,10 @@
 require 'fakefs/safe'
 
 module Saferizer
+  """
+  I borrowed most of this directly from:
+  https://github.com/Sophrinix/TryRuby/blob/master/lib/tryruby.rb
+  """
 
   def Saferizer.safe_eval(filename, timeout=15)
     require 'timeout'
