@@ -48,6 +48,6 @@ def winner(team_a, team_b)
   elsif team_a.seed &gt; team_b.seed
     team_b
   else
-    team_a ? rand(2) == 0 : team_b
+    rand(2) == 0 ? team_a : team_b
 end
 </pre>
