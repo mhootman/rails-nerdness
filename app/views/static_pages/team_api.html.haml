@@ -1,0 +1,47 @@
+- provide(:title, 'Team API')
+%h1 Team API
+%h2 Available Team Stats:
+.row
+  .span4
+    %ul
+      %strong Offensive:
+      %li>ppg (points per game)
+      %li>o_rpg (offensive rebounds per game)
+      %li>fgp (field goal %)
+      %li>ftp (free throw %)
+      %li>tpp (three-pointer %)
+  .span4
+    %ul
+      %strong Defensive:
+      %li>d_rpg (defensive rebounds per game)
+      %li>bpg (blocks per game)
+      %li>spg (steals per game)
+      %li>oppg (opponent points per game)
+  .span4
+    %ul
+      %strong Extras:
+      %li>rpi (rpi rating)
+      %li>rpi_rank (rpi ranking)
+      %li>sos (strength of schedule rating)
+      %li>sos_rank (sos ranking)
+      %li>wins (total season wins)
+      %li>losses (total season losses)
+      %li>seed (ncaa tournament seed)
+
+%h2 Example Algorithm
+
+%p If team_a scores more points and has a higher seedreturn team_a.  If team_b scores more points and has a higher seed return team_b.  Otherwise flip a coin and declare a winner.
+
+%pre
+  = preserve do
+    :escaped
+      def winner(team_a, team_b)
+        if team_a.ppg > team_b.ppg
+          if team_a.seed < team_b.seed
+            team_a
+        elsif team_a.seed > team_b.seed
+          team_b
+        else
+          rand(2) == 0 ? team_a : team_b
+        end
+      end

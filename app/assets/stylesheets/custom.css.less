@@ -1,14 +1,14 @@
-@import "bootstrap";
+@import "twitter/bootstrap";
 
 /* mixins, variables, etc. */
 
-$grayMediumLight: #eaeaea;
+@grayMediumLight: #eaeaea;
 
-@mixin box_sizing {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+// @mixin box_sizing {
+//   -moz-box-sizing: border-box;
+//   -webkit-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
 
 /* universal */
 
@@ -43,7 +43,7 @@ textarea {
   background: -ms-linear-gradient(#111111, #AB1234);
   background: linear-gradient(#111111, #AB1234);
   h1 {
-    color: #FFFFFF
+    color: #FFFFFF;
   }
 }
 
@@ -66,7 +66,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: @grayLight;
 }
 
 p {
@@ -78,7 +78,6 @@ p {
 /* header */
 
 .navbar-inverse .navbar-inner {
-  /* background-image: linear-gradient(to bottom, #AB1234, #111111); */
   background: -webkit-gradient(linear, center top, center bottom, from(#AB1234), to(#111111));
   background: -webkit-linear-gradient(#AB1234, #111111);
   background: -moz-linear-gradient(#AB1234, #111111);
@@ -108,12 +107,12 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
+  border-top: 1px solid @grayMediumLight;
+  color: @grayLight;
   a {
-    color: $gray;
+    color: @gray;
     &:hover {
-      color: $grayDarker;
+      color: @grayDarker;
     }
   }
   small {
@@ -134,7 +133,7 @@ footer {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid @grayLighter;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -159,43 +158,12 @@ aside {
   margin-right: 10px;
 }
 
-.stats {
-  overflow: auto;
-  a {
-    float: left;
-    padding: 0 10px;
-    border-left: 1px solid $grayLighter;
-    color: gray;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: $blue;
-    }
-  }
-  strong {
-    display: block;
-  }
-}
-
 .user_avatars {
   overflow: auto;
   margin-top: 10px;
   .gravatar {
     margin: 1px 1px;
   }
-}
-
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
 }
 
 /* forms */
@@ -205,7 +173,7 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  @include box_sizing;
+  // @include box_sizing;
 }
 
 input {
@@ -220,12 +188,12 @@ input {
   }
 }
 
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
- }
+// .field_with_errors {
+//   @extend .control-group;
+//   @extend .error;
+//  }
 
- /* users index */
+/* users index */
 
 .users {
   list-style: none;
@@ -233,37 +201,9 @@ input {
   li {
     overflow: auto;
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid @grayLighter;
     &:last-child {
-      border-bottom: 1px solid $grayLighter;
+      border-bottom: 1px solid @grayLighter;
     }
-  }
-}
-
-/* microposts */
-
-.microposts {
-  list-style: none;
-  margin: 10px 0 0 0;
-
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-}
-.content {
-  display: block;
-}
-.timestamp {
-  color: $grayLight;
-}
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
   }
 }

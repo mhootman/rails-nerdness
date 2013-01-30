@@ -11,7 +11,7 @@ module Saferizer
     code = open(filename, 'r') { |f| f.read }
 
     # remove function def if exists
-    code = code.start_with?('def winner') ? code.lines.to_a[1..-2].join  : code
+    code = code.start_with?('def') ? code.lines.to_a[1..-2].join  : code
 
     # setup "sandbox" mode
     FakeFS.activate!
