@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
   def index
     if current_user.admin?
-      @users = User.paginate(page: params[:page])
+      @users = User.paginate(page: params[:page], per_page: 17, order: 'username ASC')
     else
       redirect_to root_path
     end

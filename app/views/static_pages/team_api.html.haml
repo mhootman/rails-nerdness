@@ -5,32 +5,33 @@
   .span4
     %ul
       %strong Offensive:
-      %li>ppg (points per game)
-      %li>o_rpg (offensive rebounds per game)
-      %li>fgp (field goal %)
-      %li>ftp (free throw %)
-      %li>tpp (three-pointer %)
+      %li ppg (points per game)
+      %li orpg (offensive rebounds per game)
+      %li fgp (field goal %)
+      %li ftp (free throw %)
+      %li tpp (three-pointer %)
   .span4
     %ul
       %strong Defensive:
-      %li>d_rpg (defensive rebounds per game)
-      %li>bpg (blocks per game)
-      %li>spg (steals per game)
-      %li>oppg (opponent points per game)
+      %li drpg (defensive rebounds per game)
+      %li bpg (blocks per game)
+      %li spg (steals per game)
+      %li oppg (opponent points per game)
   .span4
     %ul
       %strong Extras:
-      %li>rpi (rpi rating)
-      %li>rpi_rank (rpi ranking)
-      %li>sos (strength of schedule rating)
-      %li>sos_rank (sos ranking)
-      %li>wins (total season wins)
-      %li>losses (total season losses)
-      %li>seed (ncaa tournament seed)
+      %li rpi (rpi rating)
+      %li rpi_rank (rpi ranking)
+      %li sos (strength of schedule rating)
+      %li sos_rank (sos ranking)
+      %li wins (total season wins)
+      %li losses (total season losses)
+      %li seed (ncaa tournament seed)
+      %li rpg (total rebounds per game)
 
 %h2 Example Algorithm
 
-%p If team_a scores more points and has a higher seedreturn team_a.  If team_b scores more points and has a higher seed return team_b.  Otherwise flip a coin and declare a winner.
+%p If team_a scores more points and has a higher seed return team_a.  If team_b scores the same or more points and has a higher seed return team_b.  Otherwise flip a coin and declare a winner.
 
 %pre
   = preserve do
