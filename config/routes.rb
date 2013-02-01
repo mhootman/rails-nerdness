@@ -1,6 +1,8 @@
 MarchNerdness::Application.routes.draw do
 
+  # user pages
   devise_for :users
+  resources :users, only: [:show, :index]
 
   # root redirect
   root to: 'static_pages#home'
